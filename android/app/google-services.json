@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "215322873728",
+    "project_id": "apex-mouda",
+    "storage_bucket": "apex-mouda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215322873728:android:1834569e199acd10123b65",
+        "android_client_info": {
+          "package_name": "com.example.apex_mouda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215322873728-mie3ri6bcivkbrn9ek98nfveqdetppio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyHAaNd68igpaNkOUfTIBoPlW9z0ljDcE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215322873728-mie3ri6bcivkbrn9ek98nfveqdetppio.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "215322873728-48tudgu25q046938ipr65n1v5fe3t6vu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.apexMouda.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
