@@ -39,40 +39,36 @@ class _Add_EnquiryState extends State<Add_Enquiry> {
      body: Stack(
        fit: StackFit.expand,
        children:<Widget> [
-
          SingleChildScrollView(
              child: Form(
                key: _formkey,
                child: Column(
                  children: [
-                   Padding(padding: const EdgeInsets.all(8.0),
+                   Padding(padding: const EdgeInsets.all(20.0),
                        child: Column(
                          children: [
-                           Padding(
-                             padding: const EdgeInsets.all(8.0),
-                             child: TextFormField(
-                               controller: _titleController,
-                               style: const TextStyle(color: Colors.black),
-                               keyboardType: TextInputType.text,
-                               decoration: const InputDecoration(
-                                 hintText: "Enter Title",
-                                 labelText: "Title*",
-                                 hintStyle: TextStyle(fontSize: 14.0, color: Colors.orange),
-                                 border: OutlineInputBorder(
-                                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                                     borderSide: BorderSide(color: Colors.black)),
-                                 focusedBorder: OutlineInputBorder(
-                                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                                     borderSide: BorderSide(color: Colors.black)),
-                               ),
-                               validator: (value) {
-                                 if (value!.isEmpty) {
-                                   return "Title cannot be empty";
-                                 }
-                                 return null;
-                               },
-
+                           TextFormField(
+                             controller: _titleController,
+                             style: const TextStyle(color: Colors.black),
+                             keyboardType: TextInputType.text,
+                             decoration: const InputDecoration(
+                               hintText: "Enter Title",
+                               labelText: "Title*",
+                               hintStyle: TextStyle(fontSize: 14.0, color: Colors.orange),
+                               border: OutlineInputBorder(
+                                   borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                                   borderSide: BorderSide(color: Colors.black)),
+                               focusedBorder: OutlineInputBorder(
+                                   borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                                   borderSide: BorderSide(color: Colors.black)),
                              ),
+                             validator: (value) {
+                               if (value!.isEmpty) {
+                                 return "Title cannot be empty";
+                               }
+                               return null;
+                             },
+
                            ),
                            SizedBox(height: 20,),
                            TextFormField(
@@ -107,6 +103,7 @@ class _Add_EnquiryState extends State<Add_Enquiry> {
                              keyboardType: TextInputType.number,
 
                              decoration: const InputDecoration(
+                               counterText: "",
                                hintText: "Enter Contact No.",
                                labelText: "Contact No.*",
                                hintStyle: TextStyle(fontSize: 14.0, color: Colors.orange),
@@ -129,6 +126,7 @@ class _Add_EnquiryState extends State<Add_Enquiry> {
                            SizedBox(height: 20,),
 
                            TextFormField(
+                             textAlign:TextAlign.start,
                              controller: _descController,
                              maxLines: 3,
                              maxLength: 500,
@@ -152,7 +150,6 @@ class _Add_EnquiryState extends State<Add_Enquiry> {
                                return null;
                              },
                            ),
-                           SizedBox(height: 20,),
 
                            // Card(
                            //   elevation: 5.0,
@@ -178,18 +175,16 @@ class _Add_EnquiryState extends State<Add_Enquiry> {
                            //     ),
                            //   ),
                            // ),
-                           SizedBox(height: 40),
+                           SizedBox(height: 20),
 
-                           Padding(
-                             padding:  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 32.0),
-                             child: Column(
-                               children: [
-                                 Material(
+                               SizedBox(
+                                 width: MediaQuery.of(context).size.width,
+                                 child: Material(
                                    color: AppColors.maroonColor,
                                    borderRadius:
                                    BorderRadius.circular(changeButton ? 50 : 8),
-
-                                   child: InkWell(
+                                   child:
+                                   InkWell(
                                      onTap:(){
                                        if(_formkey.currentState!.validate())
                                        {
@@ -229,11 +224,8 @@ class _Add_EnquiryState extends State<Add_Enquiry> {
 
                                      ),
                                    ),
-                                 )
-
-                               ],
-                             ),
-                           ),
+                                 ),
+                               )
 
                          ],
                        ),

@@ -51,7 +51,7 @@ class _Useful_Detail_PageState extends State<Useful_Detail_Page> {
           linksData = snapshot.data[0];
           return Scaffold(
             appBar: AppBar(
-              title: Text("${capitalizeFirstLetter('${widget.title}')} details"),
+              title: Text("${capitalizeFirstLetter('${widget.title}')} details".capitalize!),
               elevation: 0.0,
               backgroundColor: AppColors.maroonColor,
               iconTheme: IconThemeData(color: Colors.white),
