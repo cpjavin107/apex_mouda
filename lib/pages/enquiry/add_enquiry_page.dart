@@ -1,11 +1,8 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-// ignore_for_file: prefer_const_constructors
 import 'package:get/get.dart';
-
 import '../../controllers/addenquiry_controller.dart';
 import '../../res/colors/appcolors.dart';
 import '../../models/addenquiry_model.dart';
@@ -235,7 +232,6 @@ class _Add_EnquiryState extends State<Add_Enquiry> {
                ),
              ),
            ),
-
        ],
      ),
 
